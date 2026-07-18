@@ -1,0 +1,17 @@
+build/
+prebuilds/
+node_modules/
+.vscode/
+.DS_Store
+android-lib/.cxx/
+android-lib/.gradle/
+android-lib/.idea/
+android-lib/local.properties
+android-lib/gradle/gradle-daemon-jvm.properties
+libs/android/bare-signer-android.aar
+compile_commands.json
+.cache
+.idea/
+.claude/
+.ralphex/progress/
+nogit_*

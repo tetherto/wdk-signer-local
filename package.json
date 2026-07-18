@@ -1,0 +1,72 @@
+{
+  "name": "@tetherto/wdk-signer-local",
+  "version": "1.0.0-beta.0",
+  "description": "Bare signer with native keychain/keystore support",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "types": "./types",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./package": {
+      "default": "./package.json"
+    }
+  },
+  "files": [
+    "src/",
+    "types/",
+    "scripts/",
+    "binding.c",
+    "binding.h",
+    "CMakeLists.txt",
+    "prebuilds",
+    "libs/android/bare-signer-android.aar"
+  ],
+  "addon": true,
+  "scripts": {
+    "postinstall": "node scripts/setup-crypto-shim.js",
+    "build:android": "./rebuild.sh",
+    "build:types": "tsc",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
+    "test": "bare test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tetherto/wdk-signer-local.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tetherto/wdk-signer-local/issues"
+  },
+  "homepage": "https://github.com/tetherto/wdk-signer-local#readme",
+  "devDependencies": {
+    "bare": "^1.26.0",
+    "brittle": "^3.4.0",
+    "cmake-bare": "^1.6.5",
+    "semver": "^7.7.4",
+    "standard": "17.1.2",
+    "typescript": "5.8.3"
+  },
+  "dependencies": {
+    "@noble/curves": "^2.0.1",
+    "@scure/bip32": "^2.0.0",
+    "@scure/bip39": "^2.0.1",
+    "bare-crypto": "^1.13.0",
+    "bare-encoding": "^1.0.0",
+    "bare-path": "^3.0.0",
+    "bare-url": "^2.3.2",
+    "micro-key-producer": "^0.8.2",
+    "ton-crypto": "^3.2.0"
+  },
+  "standard": {
+    "ignore": [
+      "test.js",
+      "nogit_test.js"
+    ]
+  }
+}
