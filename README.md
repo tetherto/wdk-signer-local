@@ -1,6 +1,8 @@
 # wdk-signer-local
 
-A Bare native addon for secure mnemonic and private key storage with cryptographic signing using HD wallets (BIP-32/BIP-39/SLIP-10/TON).
+A Bare native addon for WDK (Wallet Development Kit) by Tether, providing mnemonic and private key storage with cryptographic signing using HD wallets (BIP-32/BIP-39/SLIP-10/TON).
+
+For the broader WDK ecosystem, see the [WDK documentation](https://docs.wdk.tether.io/).
 
 ## Features
 
